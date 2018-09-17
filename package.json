@@ -1,0 +1,16 @@
+{
+  "name": "exceljs-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "khaled hossain",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.18.0",
+    "xlsx": "^0.14.0"
+  }
+}
