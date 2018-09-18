@@ -32,9 +32,9 @@ var tasks = wb.Sheets.tasks;
 var tasksJson = XLSX.utils.sheet_to_json(tasks);
 
 var inProgressTasks = tasksJson.filter( task => {
-  return task['Task status'] === 'In Progress'
+  return task['Task status'].toLowerCase() === 'in progress' || task['Task status'].toLowerCase() === 'over due'
 });
 
 const newWs = XLSX.utils.json_to_sheet(inProgressTasks, {header:["A","B","C","D","E","F"], skipHeader:true});
-XLSX.utils.book_append_sheet(wb, newWs, "In progress");
+XLSX.utils.book_append_sheet(wb, newWs, "In progress & overdue");
 XLSX.writeFile(wb, fileName)
